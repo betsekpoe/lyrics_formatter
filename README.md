@@ -38,11 +38,11 @@ No framework or build step required.
 
 ### Full app view
 
-![Lyrics Formatter full screen](assets/images/screenshots/full screen.png)
+![Lyrics Formatter full screen](assets/images/screenshots/fullscreen.png)
 
 ### Input and output panels
 
-![Lyrics Formatter input and output](assets/images/screenshots/input and output.png)
+![Lyrics Formatter input and output](assets/images/screenshots/input_and_output.png)
 
 ### Input panel
 
