@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why This Exists | Lyrics Formatter</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
+  </head>
+  <body>
+    <main class="app-shell story-shell">
+      <nav class="top-nav" aria-label="Primary">
+        <a href="../index.html" class="nav-link">Formatter</a>
+        <a href="why.html" class="nav-link current" aria-current="page"
+          >Why This Exists</a
+        >
+      </nav>
+
+      <header class="hero">
+        <h1>Why I Built This</h1>
+        <p class="subtitle">
+          A simple tool born from a repetitive, time-consuming task.
+        </p>
+      </header>
+
+      <figure class="story-visual">
+        <img
+          src="../assets/images/image.png"
+          alt="A visual related to the project story"
+          class="story-image"
+        />
+      </figure>
+
+      <section class="story-card" aria-label="Project story">
+        <h2>The Problem</h2>
+        <p>
+          Preparing lyrics for projection is tedious. Copied text comes with
+          extra spaces, broken formatting, stray symbols, and labels like Chorus
+          and Verse 1 that don't belong on screen. <br />
+          Fixing it by hand for every song, before every service is slow and
+          easy to get wrong.
+        </p>
+
+        <h2>The Goal</h2>
+        <p>
+          Build a focused formatter that handles this cleanup in seconds while
+          still giving control over line grouping, replacements, and symbol
+          mapping for local-language projection workflows.
+        </p>
+
+        <h2>Design Principle</h2>
+        <p>
+          Keep the interface minimal and practical: less visual noise, fast
+          actions, clear outputs. Every feature should reduce friction, not add
+          complexity.
+        </p>
+
+        <h2>Who It Helps</h2>
+        <p>
+          Media teams, projectionists, and anyone who needs clean, readable
+          lyric lines prepared quickly for live use.
+        </p>
+      </section>
+    </main>
+
+    <aside class="feedback-form-container" aria-label="Feedback form">
+      <form class="feedback-form" aria-label="Suggest changes or features">
+        <h3>Feedback</h3>
+        <label for="feedback-name">Name</label>
+        <input
+          id="feedback-name"
+          type="text"
+          placeholder="Your name"
+          class="feedback-input"
+        />
+
+        <label for="feedback-email">Email</label>
+        <input
+          id="feedback-email"
+          type="email"
+          placeholder="user@email.com"
+          class="feedback-input"
+        />
+
+        <label for="feedback-message">Message</label>
+        <textarea
+          id="feedback-message"
+          placeholder="Suggest features, report bugs, or share ideas..."
+          class="feedback-textarea"
+        ></textarea>
+
+        <button type="submit" class="feedback-submit">Send</button>
+        <p class="feedback-status" role="status" aria-live="polite"></p>
+      </form>
+    </aside>
+
+    <footer class="site-footer">
+      <p><img src="../assets/images/logo.png" alt="Logo"> &copy; 2026 <a href="https://github.com/betsekpoe" class="footer-link" target="_blank" rel="noopener noreferrer">Blessing Tsekpoe Eyram</a>. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

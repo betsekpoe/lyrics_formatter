@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lyrics Formatter</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  </head>
+  <body>
+    <main class="app-shell">
+      <nav class="top-nav" aria-label="Primary">
+        <a href="index.html" class="nav-link current" aria-current="page">Formatter</a>
+        <a href="pages/why.html" class="nav-link">Why This Exists</a>
+      </nav>
+      <header class="hero">
+        <h1>Lyrics Formatter</h1>
+        <p class="subtitle">
+          Paste text. Get paired lines with a blank line between each pair.
+        </p>
+      </header>
+
+      <section class="panel-grid" aria-label="Formatter">
+        <div class="editor-panels">
+          <article class="panel">
+            <div class="panel-head">
+              <h2>Input</h2>
+            </div>
+            <label class="sr-only" for="inputText">Input text</label>
+            <textarea
+              id="inputText"
+              placeholder="Paste your lyrics here..."
+              spellcheck="false"
+            ></textarea>
+            <div class="grouping-controls" aria-label="Alternate pairing modes">
+              <label for="groupSizeMode">Group Lines</label>
+              <select id="groupSizeMode">
+                <option value="2" selected>By 2 (Default)</option>
+                <option value="3">By 3</option>
+                <option value="custom">Custom</option>
+              </select>
+              <input
+                id="customGroupSize"
+                type="number"
+                min="2"
+                max="12"
+                step="1"
+                value="4"
+                aria-label="Custom group size"
+                class="hidden"
+              />
+            </div>
+            <label class="option-toggle" for="preservePatternsToggle">
+              <input id="preservePatternsToggle" type="checkbox"/>
+              <span>Preserve section labels (chorus, verse, bridge, etc.)</span>
+            </label>
+            <div class="panel-actions">
+              <button id="formatBtn" type="button">Format</button>
+              <button id="clearBtn" type="button" class="ghost">Clear</button>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <h2>Output</h2>
+            </div>
+            <label class="sr-only" for="outputText">Formatted output</label>
+            <textarea id="outputText" spellcheck="false"></textarea>
+            <div class="panel-actions">
+              <button id="copyBtn" type="button">Copy Output</button>
+              <p id="statusText" role="status" aria-live="polite"></p>
+            </div>
+          </article>
+        </div>
+
+        <aside class="panel tools-panel" aria-label="Extra tools">
+          <section class="tool-section mapper-section">
+            <h3>Symbol Mapper</h3>
+            <!-- <p class="tool-help">
+              Converts local-language characters to projection symbols with
+              preview.
+            </p> -->
+
+            <label for="symbolPreset">Select Akan Font</label>
+            <select id="symbolPreset">
+              <option value="akanSymbolsSetOne">CapeCoast Font</option>
+              <option value="akanSymbolsSetTwo">Twi Times New Roman</option>
+              <option value="english">English (No conversion)</option>
+            </select>
+
+            <label for="mapperContext">Context</label>
+            <select id="mapperContext">
+              <option value="all">Entire output box</option>
+              <option value="selected">Selected text</option>
+            </select>
+
+            <div class="inline-actions">
+              <!-- <button id="previewMapperBtn" type="button" class="ghost">
+                Preview
+              </button> -->
+              <button id="applyMapperBtn" type="button">Apply</button>
+            </div>
+
+            <p id="mapperStatus" class="tool-meta" role="status" aria-live="polite"></p>
+          </section>
+          <section class="tool-section">
+            <h3>Replace Text</h3>
+            <p class="tool-help">Highlight or type text to replace</p>
+            <!-- <p id="replaceScope" class="tool-meta">Target: Input</p> -->
+
+            <label for="replaceFind">Find</label>
+            <input
+              id="replaceFind"
+              type="text"
+              placeholder="Select text or type phrase"
+            />
+
+            <label for="replaceWith">Replace With</label>
+            <input
+              id="replaceWith"
+              type="text"
+              placeholder="Type replacement"
+            />
+
+            <button id="replaceBtn" type="button">Replace Text</button>
+            <p
+              id="replaceStatus"
+              class="tool-meta"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+
+    <footer class="site-footer">
+      <p><img src="assets/images/logo.png" alt="Logo"> &copy; 2026 <a href="https://github.com/betsekpoe" class="footer-link" target="_blank" rel="noopener noreferrer">Blessing Tsekpoe Eyram</a>. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
