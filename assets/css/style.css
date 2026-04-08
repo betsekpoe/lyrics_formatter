@@ -22,6 +22,8 @@ body {
   margin: 0;
   min-height: 100vh;
   height: auto;
+  display: flex;
+  flex-direction: column;
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
   color: var(--ink);
   background: var(--bg);
@@ -31,11 +33,10 @@ body {
 
 .app-shell {
   width: min(1400px, 96vw);
-  min-height: calc(100vh - 2rem);
   height: auto;
   margin: 1rem auto;
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto;
   gap: 0.9rem;
 }
 
@@ -348,6 +349,9 @@ button.ghost {
 
 .story-shell {
   height: auto;
+}
+
+body.page-story .app-shell {
   min-height: calc(100vh - 2rem);
 }
 
@@ -510,7 +514,7 @@ button.ghost {
   text-align: center;
   padding: 1.5rem 1rem;
   border-top: 1px solid var(--line);
-  margin-top: 3rem;
+  margin-top: auto;
   background: var(--surface);
 }
 
