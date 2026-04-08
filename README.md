@@ -54,7 +54,7 @@ No framework or build step required.
 
 ### Extra features panel
 
-![Lyrics Formatter extra features](assets/images/screenshots/extra features.png)
+![Lyrics Formatter extra features](assets/images/screenshots/extra_features.png)
 
 ## Project structure
 
