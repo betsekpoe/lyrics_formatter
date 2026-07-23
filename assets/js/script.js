@@ -83,7 +83,7 @@ function formatIntoPairs(rawText) {
   } else if (selectedMode === "custom") {
     const customValue = Number.parseInt(customGroupSize?.value ?? "2", 10);
     if (Number.isFinite(customValue)) {
-      groupSize = Math.min(Math.max(customValue, 2), 12);
+      groupSize = Math.min(Math.max(customValue, 1), 12);
     }
   }
 
